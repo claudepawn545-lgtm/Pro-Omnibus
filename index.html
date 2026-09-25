@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Omnibus</title>
+    
+    <!-- Riga modificata con percorso relativo -->
+    <link rel="icon" type="image/png" href="./logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a', 
+                            950: '#020617',
+                        },
+                        accent: {
+                            400: '#60a5fa',
+                            500: '#3b82f6', 
+                            600: '#2563eb',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f8fafc;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.15), 0 10px 10px -5px rgba(37, 99, 235, 0.05);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased font-sans">
+
+    <header class="relative min-h-[70vh] flex flex-col items-center justify-center bg-gradient-to-br from-navy-950 via-navy-900 to-blue-900 text-center px-6 overflow-hidden">
+        
+        <div class="absolute top-10 left-10 w-64 h-64 bg-accent-500 rounded-full mix-blend-overlay filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-10 right-10 w-64 h-64 bg-sky-400 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <span class="inline-block py-1 px-4 rounded-full bg-white/10 text-accent-400 font-bold text-sm mb-6 uppercase tracking-widest backdrop-blur-sm border border-white/20">
+                Elezioni d'Istituto
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 drop-shadow-lg tracking-tight">
+                <span class="text-accent-400">Pro Omnibus</span>
+            </h1>
+            <p class="text-xl md:text-3xl text-blue-100 font-medium mb-10 italic drop-shadow-md">
+                "Ascoltare tutti per spingersi più in alto."
+            </p>
+            
+            <!-- Pulsanti Affiancati -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#proposte" class="inline-flex items-center bg-accent-500 hover:bg-accent-600 text-white font-bold text-lg py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-xl">
+                    Lascia la tua idea <i class="fas fa-paper-plane ml-3"></i>
+                </a>
+                <a href="https://instagram.com/proomnibus.official" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 hover:opacity-90 text-white font-bold text-lg py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-xl">
+                    Seguici su IG <i class="fab fa-instagram ml-3 text-xl"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Decorazione fondo header -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="relative block w-full h-12 md:h-16" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- PROGRAMMA -->
+    <section id="programma" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-navy-900 mb-4">I 6 Punti Chiave</h2>
+                <div class="w-16 h-1.5 bg-accent-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-accent-500 card-hover flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent-500 text-xl flex-shrink-0"><i class="fas fa-droplet"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Punti Ristoro</h3>
+                        <p class="text-sm text-gray-600">Distributori su ogni piano per evitare assembramenti.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-navy-900 card-hover flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-navy-900 text-xl flex-shrink-0"><i class="fas fa-people-arrows"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Peer-Tutoring</h3>
+                        <p class="text-sm text-gray-600">Aiuto reciproco allo studio in cambio di crediti scolastici.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-accent-500 card-hover flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent-500 text-xl flex-shrink-0"><i class="fas fa-file-signature"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Uscite Flessibili</h3>
+                        <p class="text-sm text-gray-600">Liberatoria per gestire meglio le ore di assemblea.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-navy-900 card-hover flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-navy-900 text-xl flex-shrink-0"><i class="fas fa-bottle-water"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Scuola Plastic-Free</h3>
+                        <p class="text-sm text-gray-600">Borracce personalizzate nel merchandising del liceo.</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-accent-500 card-hover flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent-500 text-xl flex-shrink-0"><i class="fas fa-store"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Mercatino Online</h3>
+                        <p class="text-sm text-gray-600">Piattaforma digitale per scambiare libri e materiale.</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-navy-900 card-hover flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-navy-900 text-xl flex-shrink-0"><i class="fas fa-door-open"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Open Day</h3>
+                        <p class="text-sm text-gray-600">Gli studenti tornano protagonisti nell'orientamento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOX PROPOSTE -->
+    <section id="proposte" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6 max-w-4xl relative z-10">
+            
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-navy-900 mb-4">Il Box Proposte</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Pro Omnibus significa essere al servizio di tutti. Compila il modulo sotto: dicci cosa cambiare o cosa migliorare, ti ascoltiamo.
+                </p>
+            </div>
+
+            <!-- Il Contenitore del Modulo -->
+            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-12 shadow-xl">
+                
+                <!-- FORM -->
+                <form id="form-proposte" class="space-y-6">
+                    
+                    <div>
+                        <label for="area" class="block text-sm font-bold text-navy-900 mb-2">1. Area di interesse *</label>
+                        <div class="relative">
+                            <select id="area" required class="w-full appearance-none px-4 py-4 rounded-xl bg-white border border-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all cursor-pointer">
+                                <option value="" disabled selected>Seleziona l'argomento...</option>
+                                <option value="strutture">Strutture, Bagni e Servizi</option>
+                                <option value="didattica">Didattica e Orari</option>
+                                <option value="eventi">Eventi, Assemblee e Socialità</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-accent-500">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="messaggio" class="block text-sm font-bold text-navy-900 mb-2">2. La tua proposta *</label>
+                        <textarea id="messaggio" required rows="4" placeholder="Descrivi qui il problema o la tua idea..." class="w-full px-4 py-4 rounded-xl bg-white border border-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all resize-none"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="contatto" class="block text-sm font-bold text-navy-900 mb-2">3. Chi sei? <span class="text-gray-400 font-normal">(Facoltativo)</span></label>
+                        <input type="text" id="contatto" placeholder="Es. Marco, 3^B (lascia vuoto se vuoi restare anonimo)" class="w-full px-4 py-4 rounded-xl bg-white border border-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all">
+                    </div>
+
+                    <button type="submit" id="btn-invia" class="w-full bg-accent-500 hover:bg-accent-600 text-white font-bold text-lg py-4 rounded-xl transition-all shadow-lg hover:shadow-xl mt-4 flex justify-center items-center">
+                        <span>Invia Proposta</span>
+                        <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                    <p class="text-xs text-center text-gray-500 mt-3">* I campi contrassegnati sono obbligatori</p>
+                </form>
+
+                <!-- MESSAGGIO DI SUCCESSO -->
+                <div id="messaggio-successo" class="hidden fade-in text-center py-10">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-check text-5xl text-accent-500"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-navy-900 mb-3">Ricevuto forte e chiaro!</h3>
+                    <p class="text-gray-600 text-lg mb-8 max-w-md mx-auto">
+                        Grazie per il tuo contributo. Leggeremo la tua proposta e lavoreremo per portarla in consiglio.
+                    </p>
+                    <button id="btn-nuova-proposta" class="px-6 py-2 border-2 border-accent-500 text-accent-600 font-semibold rounded-full hover:bg-blue-50 transition-colors">
+                        Invia un'altra idea
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-900 text-slate-300 py-8 text-center border-t border-navy-800">
+        <p class="text-sm font-semibold tracking-wider">LISTA PRO OMNIBUS &copy; 2026/2027</p>
+    </footer>
+
+    <script>
+        const botToken = "8932156003:AAGN47MrQKas7jjtYPEc2yX7vdAI1eIIExk"; 
+        const chatId = "8765774288";
+
+        const form = document.getElementById('form-proposte');
+        const btnInvia = document.getElementById('btn-invia');
+        const boxSuccesso = document.getElementById('messaggio-successo');
+        const btnNuova = document.getElementById('btn-nuova-proposta');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const area = document.getElementById('area').value;
+            const messaggio = document.getElementById('messaggio').value;
+            const contatto = document.getElementById('contatto').value || 'Anonimo';
+
+            const testoTelegram = `📣 *Nuova Proposta Pro Omnibus*\n\n*Area:* ${area}\n*Da:* ${contatto}\n*Messaggio:*\n${messaggio}`;
+
+            const testoOriginale = btnInvia.innerHTML;
+            btnInvia.innerHTML = '<span>Invio in corso...</span> <i class="fas fa-spinner fa-spin ml-2"></i>';
+            btnInvia.disabled = true;
+            btnInvia.classList.add('opacity-75');
+
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: testoTelegram,
+                    parse_mode: 'Markdown'
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    form.classList.add('hidden');
+                    boxSuccesso.classList.remove('hidden');
+                } else {
+                    alert("C'è stato un problema con l'invio. Riprova più tardi.");
+                }
+            })
+            .catch(error => {
+                alert("Errore di connessione. Controlla la tua rete e riprova.");
+                console.error('Errore Telegram:', error);
+            })
+            .finally(() => {
+                btnInvia.innerHTML = testoOriginale;
+                btnInvia.disabled = false;
+                btnInvia.classList.remove('opacity-75');
+            });
+        });
+
+        btnNuova.addEventListener('click', function() {
+            form.reset();
+            boxSuccesso.classList.add('hidden');
+            form.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
