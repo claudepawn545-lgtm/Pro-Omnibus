@@ -6,7 +6,7 @@
     <title>Pro Omnibus</title>
     
     <!-- Riga modificata con percorso relativo -->
-    <link rel="icon" type="image/png" href="./Logo.png">
+    <link rel="icon" type="image/png" href="./logo.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -39,6 +39,18 @@
     </script>
 
     <style>
+
+/* Pro Omnibus site navigation */
+.site-nav{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.site-nav .nav-inner{max-width:1152px;margin:auto;padding:0 24px;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.site-nav .nav-brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800}
+.site-nav .nav-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#60a5fa,#2563eb);display:grid;place-items:center;font-size:13px;box-shadow:0 8px 20px rgba(37,99,235,.35)}
+.site-nav .nav-links{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.site-nav .nav-links a{color:#cbd5e1;text-decoration:none;font-weight:700;font-size:.88rem;padding:9px 12px;border-radius:10px;transition:.2s}
+.site-nav .nav-links a:hover{background:rgba(255,255,255,.08);color:#fff}
+.site-nav .nav-links .nav-market{color:#fff;background:#2563eb;box-shadow:0 6px 16px rgba(37,99,235,.28)}
+@media(max-width:640px){.site-nav .nav-inner{padding:0 16px}.site-nav .brand-label{display:none}.site-nav .nav-links a{font-size:.78rem;padding:8px 9px}}
+
         body {
             background-color: #f8fafc;
         }
@@ -64,6 +76,20 @@
 </head>
 <body class="text-gray-800 antialiased font-sans">
 
+    <div id="top"></div>
+
+    <nav class="site-nav" aria-label="Navigazione principale">
+        <div class="nav-inner">
+            <a class="nav-brand" href="#top" aria-label="Pro Omnibus">
+                <span class="nav-mark">PO</span><span class="brand-label">Pro Omnibus</span>
+            </a>
+            <div class="nav-links">
+                <a href="#programma">Programma</a>
+                <a href="#proposte">Proposte</a>
+                <a href="mercatino.html" class="nav-market">Mercatino libri ↗</a>
+            </div>
+        </div>
+    </nav>
     <header class="relative min-h-[70vh] flex flex-col items-center justify-center bg-gradient-to-br from-navy-950 via-navy-900 to-blue-900 text-center px-6 overflow-hidden">
         
         <div class="absolute top-10 left-10 w-64 h-64 bg-accent-500 rounded-full mix-blend-overlay filter blur-3xl opacity-30"></div>
@@ -141,13 +167,16 @@
                     </div>
                 </div>
                 <!-- Card 5 -->
-                <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-accent-500 card-hover flex items-start space-x-4">
-                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent-500 text-xl flex-shrink-0"><i class="fas fa-store"></i></div>
+                <a href="mercatino.html" class="no-underline bg-white p-6 rounded-2xl shadow-md border-t-4 border-accent-500 card-hover flex items-start space-x-4 group">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent-500 text-xl flex-shrink-0 group-hover:bg-blue-100 transition-colors"><i class="fas fa-store"></i></div>
                     <div>
-                        <h3 class="text-xl font-bold text-navy-900 mb-2">Mercatino Online</h3>
-                        <p class="text-sm text-gray-600">Piattaforma digitale per scambiare libri e materiale.</p>
+                        <div class="flex items-start justify-between gap-3">
+                            <h3 class="text-xl font-bold text-navy-900 mb-2">Mercatino Online</h3>
+                            <i class="fas fa-arrow-up-right-from-square text-accent-500 mt-1 opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        </div>
+                        <p class="text-sm text-gray-600">Piattaforma digitale per trovare i libri degli studenti e contattarli direttamente su WhatsApp.</p>
                     </div>
-                </div>
+                </a>
                 <!-- Card 6 -->
                 <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-navy-900 card-hover flex items-start space-x-4">
                     <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-navy-900 text-xl flex-shrink-0"><i class="fas fa-door-open"></i></div>
@@ -224,6 +253,27 @@
                     </button>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MERCATINO CTA -->
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="rounded-3xl overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-blue-900 text-white shadow-2xl">
+                <div class="grid md:grid-cols-[1.2fr_.8fr] items-center gap-8 p-8 md:p-12">
+                    <div>
+                        <span class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-blue-200">Pro Omnibus · Mercatino libri</span>
+                        <h2 class="text-3xl md:text-5xl font-extrabold mt-3 mb-4">Hai bisogno di un libro?</h2>
+                        <p class="text-blue-100 text-lg max-w-2xl">Consulta il mercatino della scuola, trova chi possiede il libro che cerchi e contattalo direttamente.</p>
+                    </div>
+                    <div class="md:text-right">
+                        <a href="mercatino.html" class="inline-flex items-center justify-center bg-accent-500 hover:bg-accent-600 text-white font-bold text-lg py-4 px-7 rounded-full transition-all shadow-xl">
+                            Apri il Mercatino <i class="fas fa-arrow-right ml-3"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
